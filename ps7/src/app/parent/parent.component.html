@@ -1,0 +1,30 @@
+<p>parent works!</p>
+
+<app-one-component style="display: flex; justify-content: center;"
+                   [cities]="cities" (selectedCity)="setSelectedCity($event)"
+></app-one-component>
+
+<app-two-component style ="display flex; justify-content: center;"
+                   [selectedCity]="city"
+><</app-two-component>
+
+<form (ngSubmit)="submitForm()">
+  City: <input name="city" [(ngModel)]="city">
+  Units: <input name="units" [(ngModel)]="units">
+  <button type="submit">Submit</button>
+
+</form>
+
+
+<!--<h2> Welcome to {{title}}!</h2>-->
+<!--<h1> Weather: </h1>-->
+<!--<label for="City">Search City:</label><br>-->
+<!--<input type="text" id="City">-->
+<!--<div>-->
+<!--  <button (click)="submitForm()">Submit</button>-->
+<!--</div>-->
+<!--<div>-->
+<!--  <ng-container *ngIf=clicked>-->
+<!--    <app-list></app-list>-->
+<!--  </ng-container>-->
+<!--</div>-->
